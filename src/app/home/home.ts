@@ -13,11 +13,13 @@ import { ModulesComponent } from './modules/modules';
 import { FaqComponent } from './faq/faq';
 import { CtaComponent } from './cta/cta';
 import { CommunityComponent } from './community/community';
+import { NewsletterComponent } from './newsletter/newsletter';
+import { FooterComponent } from '../components/footer/footer';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroComponent, TrustStripComponent, SolutionsComponent, JourneyComponent, GuaranteeComponent, WhyChooseComponent, ClientsComponent, HowItWorksComponent, TestimonialsComponent, ModulesComponent, FaqComponent, CtaComponent, CommunityComponent],
+  imports: [CommonModule, HeroComponent, TrustStripComponent, SolutionsComponent, JourneyComponent, GuaranteeComponent, WhyChooseComponent, ClientsComponent, HowItWorksComponent, TestimonialsComponent, ModulesComponent, FaqComponent, CtaComponent, CommunityComponent, NewsletterComponent, FooterComponent],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

@@ -7,7 +7,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <section class="relative overflow-hidden">
-      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700"></div>
+      <div class="absolute inset-0 -z-10 pointer-events-none">
+        <div class="absolute -inset-10 bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 rotate-[-2deg] lg:rotate-[-3deg]"></div>
+      </div>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div class="max-w-3xl">
           <h2 class="text-white text-4xl sm:text-5xl font-extrabold tracking-tight">MYGST Community</h2>
