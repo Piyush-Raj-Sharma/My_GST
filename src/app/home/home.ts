@@ -9,12 +9,14 @@ import { WhyChooseComponent } from './why/why';
 import { ClientsComponent } from './clients/clients';
 import { HowItWorksComponent } from './how/how';
 import { TestimonialsComponent } from './testimonials/testimonials';
+import { ModulesComponent } from './modules/modules';
+import { FaqComponent } from './faq/faq';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroComponent, TrustStripComponent, SolutionsComponent, JourneyComponent, GuaranteeComponent, WhyChooseComponent, ClientsComponent, HowItWorksComponent, TestimonialsComponent],
+  imports: [CommonModule, HeroComponent, TrustStripComponent, SolutionsComponent, JourneyComponent, GuaranteeComponent, WhyChooseComponent, ClientsComponent, HowItWorksComponent, TestimonialsComponent, ModulesComponent, FaqComponent],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {} 
+export class Home {}
