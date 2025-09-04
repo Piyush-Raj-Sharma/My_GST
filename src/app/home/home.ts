@@ -7,11 +7,13 @@ import { JourneyComponent } from './journey/journey';
 import { GuaranteeComponent } from './guarantee/guarantee';
 import { WhyChooseComponent } from './why/why';
 import { ClientsComponent } from './clients/clients';
+import { HowItWorksComponent } from './how/how';
+import { TestimonialsComponent } from './testimonials/testimonials';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroComponent, TrustStripComponent, SolutionsComponent, JourneyComponent, GuaranteeComponent, WhyChooseComponent, ClientsComponent],
+  imports: [CommonModule, HeroComponent, TrustStripComponent, SolutionsComponent, JourneyComponent, GuaranteeComponent, WhyChooseComponent, ClientsComponent, HowItWorksComponent, TestimonialsComponent],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
