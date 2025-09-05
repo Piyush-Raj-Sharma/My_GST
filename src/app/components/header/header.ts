@@ -33,7 +33,7 @@ interface MenuSection { label: string; widthClass?: string; groups: MenuGroup[] 
             </a>
 
             <ng-container *ngFor="let m of menus; let i = index">
-              <div class="relative" (mouseenter)="openIndex(i, true)" (mouseleave)="openIndex(i, false)">
+              <div class="relative" (mouseenter)="handleEnter(i)" (mouseleave)="handleLeave(i)">
                 <button class="px-6 py-2 border border-gray-200 flex items-center gap-2 text-gray-800" [ngClass]="i === menus.length - 1 ? 'rounded-r-xl' : ''">
                   <span class="font-semibold tracking-wide">{{ m.label }}</span>
                   <span class="text-gray-500">▾</span>
@@ -144,13 +144,37 @@ export class HeaderComponent {
   ];
 
   private openMap = new Map<number, boolean>();
+  private openTimers = new Map<number, any>();
+  private closeTimers = new Map<number, any>();
   mobileOpen = signal(false);
 
   openIndex(i: number, state: boolean) { this.openMap.set(i, state); }
   isOpenIndex(i: number) { return !!this.openMap.get(i); }
+
+  private clearTimers(i: number) {
+    const ot = this.openTimers.get(i); if (ot) { clearTimeout(ot); this.openTimers.delete(i); }
+    const ct = this.closeTimers.get(i); if (ct) { clearTimeout(ct); this.closeTimers.delete(i); }
+  }
+
+  handleEnter(i: number) {
+    this.clearTimers(i);
+    const t = setTimeout(() => this.openIndex(i, true), 80);
+    this.openTimers.set(i, t);
+  }
+
+  handleLeave(i: number) {
+    this.clearTimers(i);
+    const t = setTimeout(() => this.openIndex(i, false), 120);
+    this.closeTimers.set(i, t);
+  }
+
   toggleMobile() { this.mobileOpen.update(v => !v); }
 
   @HostListener('window:scroll') onScroll() {
     this.openMap.clear();
+    this.openTimers.forEach(id => clearTimeout(id));
+    this.closeTimers.forEach(id => clearTimeout(id));
+    this.openTimers.clear();
+    this.closeTimers.clear();
   }
 } 
