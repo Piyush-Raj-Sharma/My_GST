@@ -18,7 +18,7 @@ interface WhyItem {title: string; description: string; accent: Accent; svgIcon?:
             <span class="inline-block" [innerHTML]="safeHeaderSvg"></span>
           </div>
           <div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#0a4683]">{{ headerTitle }}</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">{{ headerTitle }}</h2>
           </div>
           <div>
             <p class="text-gray-600 text-lg">{{ headerSubtitle }}</p>

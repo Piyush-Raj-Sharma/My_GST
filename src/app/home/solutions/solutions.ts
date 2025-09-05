@@ -21,7 +21,7 @@ interface SolutionItem {
     <section class="bg-white pt-10 sm:pt-6 pb-12 sm:pb-16">
       <div class="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#0a4683]">Our GST Solutions</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Our GST Solutions</h2>
           <p class="mt-2 text-gray-600 text-lg">Comprehensive GST solutions for your business</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

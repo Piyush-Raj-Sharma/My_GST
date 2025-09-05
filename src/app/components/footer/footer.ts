@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <footer class="bg-[#0b3345] text-white pt-6 pb-8">
+    <footer class="bg-sky-950 text-white pt-6">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-24">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div class="lg:col-span-7 space-y-8">
@@ -63,7 +63,11 @@ import { CommonModule } from '@angular/common';
             </div>
           </div>
         </div>
-
+      </div>
+      <div class="mt-10 bg-black px-4 py-2">
+        <div class="max-w-7xl mx-auto flex justify-end text-sm text-white">
+          © Copyright 2025 My GST Refund. All rights reserved.
+        </div>
       </div>
     </footer>
   `,

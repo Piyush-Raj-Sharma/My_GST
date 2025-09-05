@@ -10,7 +10,7 @@ interface Testimonial { name: string; roleLocation: string; quote: string; ratin
   imports: [CommonModule, TestimonialCardComponent],
   template: `
     <section class="bg-[#f7fafc] py-12 sm:py-16">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
           <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">What Our Clients Say</h2>
           <p class="mt-2 text-gray-600 text-lg">Trusted by businesses across India</p>

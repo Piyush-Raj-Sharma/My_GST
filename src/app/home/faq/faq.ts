@@ -10,12 +10,12 @@ interface FaqItem { q: string; a: string }
   imports: [CommonModule, FaqItemComponent],
   template: `
     <section class="bg-white py-12 sm:py-16">
-      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-5xl px-8 sm:px-6 lg:px-8">
         <div class="text-center mb-8">
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#0a4683]">Frequently Asked Questions</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Frequently Asked Questions</h2>
           <p class="mt-2 text-gray-600 text-lg">Get answers to common questions about GST refunds</p>
         </div>
-        <div class="rounded-xl ring-1 ring-black/5 shadow-sm/5 overflow-hidden">
+        <div class="rounded bg-white shadow-lg shadow-sm/5 overflow-hidden">
           <app-faq-item *ngFor="let item of items; let i = index"
                          [index]="i + 1"
                          [question]="item.q"

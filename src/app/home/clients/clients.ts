@@ -9,9 +9,9 @@ interface ClientLogo { src: string; alt: string }
   imports: [CommonModule],
   template: `
     <section class="bg-[#f7fafc] py-12 sm:py-16">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#0a4683]">Our Clients</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Our Clients</h2>
           <p class="mt-2 text-gray-600 text-lg">Trusted by businesses nationwide for reliable, efficient, and lasting partnerships.</p>
         </div>
 

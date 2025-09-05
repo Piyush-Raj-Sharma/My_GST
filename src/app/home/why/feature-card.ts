@@ -15,7 +15,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         </ng-container>
       </div>
 
-        <h4 class="text-xl font-semibold text-[#0a4683]">{{ title }}</h4>
+        <h4 class="text-xl font-semibold text-gray-800">{{ title }}</h4>
         <p class="text-gray-600 leading-relaxed">{{ description }}</p>
 
     </article>

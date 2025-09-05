@@ -17,7 +17,7 @@ interface Step {
     <section class="bg-[#f7fafc] py-12 sm:py-16">
       <div class="mx-auto max-w-7xl px-8 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#0a4683]">Your Refund Journey</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Your Refund Journey</h2>
           <p class="mt-2 text-gray-600 text-lg">Three simple steps to get your GST refund</p>
         </div>
 
@@ -28,7 +28,7 @@ interface Step {
                    [ngClass]="s.accent === 'blue' ? 'bg-[#003f8c]' : 'bg-orange-500'">
                 <span class="inline-block" [innerHTML]="safeSvgs[i]"></span>
               </div>
-              <h3 class="mt-6 text-2xl font-semibold text-[#0a4683]">{{ s.title }}</h3>
+              <h3 class="mt-6 text-2xl font-semibold text-gray-800">{{ s.title }}</h3>
               <p class="mt-3 text-gray-600 leading-relaxed max-w-sm mx-auto">{{ s.description }}</p>
             </div>
 

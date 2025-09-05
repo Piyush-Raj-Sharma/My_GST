@@ -15,7 +15,7 @@ export type SolutionPoint = { text: string };
         <div class="mx-auto h-12 w-12 sm:h-16 sm:w-16 rounded-full flex items-center justify-center text-[#0a4683]" [ngClass]="circleColor">
           <span class="inline-block" [innerHTML]="safeSvgIcon"></span>
         </div>
-        <h3 class="text-xl font-semibold text-[#0a4683] text-center">{{ title }}</h3>
+        <h3 class="text-xl font-semibold text-gray-800 text-center">{{ title }}</h3>
         <p class="text-center text-gray-600 leading-relaxed">{{ description }}</p>
         <ul class="mt-1 space-y-2 text-gray-700">
           <li class="flex items-start gap-2" *ngFor="let p of points">

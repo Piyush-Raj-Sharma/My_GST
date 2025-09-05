@@ -6,16 +6,16 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="relative overflow-hidden">
-      <div class="absolute inset-0 -z-10 pointer-events-none">
-        <div class="absolute -inset-10 bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 rotate-[-2deg] lg:rotate-[-3deg]"></div>
-      </div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div class="max-w-3xl">
-          <h2 class="text-white text-4xl sm:text-5xl font-extrabold tracking-tight">MYGST Community</h2>
-          <p class="mt-4 text-white/90 text-xl">Join India's First GST Community Forum</p>
-          <a href="#" class="mt-8 inline-flex items-center justify-center rounded-lg bg-yellow-400 px-6 py-3 text-[#0a4683] font-extrabold shadow-[0_10px_25px_rgba(0,0,0,0.25)] hover:bg-yellow-300">VISIT NOW!</a>
+    <section class="relative flex flex-col items-center justify-center gap-5 bg-gradient-to-br from-fuchsia-900 to-sky-800 pb-24 pt-32 text-black md:px-20 lg:pb-16 lg:pt-24">
+      <div class="container mx-auto flex grow flex-col items-center justify-between lg:flex-row">
+        <div class="mb-12 flex flex-col items-center gap-3 px-6 text-center text-white lg:mb-auto lg:items-start lg:px-0 lg:text-left">
+        <h2 class="text-5xl font-bold">MYGST Community</h2>
+        <span class="text-2xl">Join India's First GST Community Forum</span>
+        <div class="flex"><a href="#" class="mt-4 w-auto rounded-lg border border-yellow-300 bg-yellow-400 px-10 py-2 text-lg font-bold uppercase text-black"> Visit Now! </a></div>
         </div>
+        <img alt="MYGST Community: India's First GST Community Forum" src="https://www.mygstrefund.com/img/forum.svg" class="h-72">
+        <div class="absolute -top-px left-0 w-full overflow-hidden leading-none"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="h-14 w-full"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-white"></path></svg></div>
+        <div class="absolute bottom-0 left-0 w-full rotate-180 overflow-hidden leading-none"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="h-14 w-full"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-sky-950"></path></svg></div>
       </div>
     </section>
   `,
