@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <footer class="bg-[#0b3345] text-white pt-12 pb-8">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <footer class="bg-[#0b3345] text-white pt-6 pb-8">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-24">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div class="lg:col-span-7 space-y-8">
             <div>
@@ -64,13 +64,6 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
 
-        <div class="mt-10 flex items-center gap-4 text-3xl">
-          <a href="#" aria-label="Facebook">📘</a>
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="Twitter">🐦</a>
-          <a href="#" aria-label="LinkedIn">💼</a>
-          <a href="#" aria-label="WhatsApp">💬</a>
-        </div>
       </div>
     </footer>
   `,

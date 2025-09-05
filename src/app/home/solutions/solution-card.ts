@@ -9,7 +9,7 @@ export type SolutionPoint = { text: string };
   standalone: true,
   imports: [CommonModule],
   template: `
-    <article class="relative rounded-xl bg-white ring-1 ring-black/5 shadow-sm/5 flex flex-col h-full overflow-hidden">
+    <article class="service-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
       <div class="h-3 w-full" [ngClass]="borderColor"></div>
       <div class="p-5 sm:p-6 flex flex-col gap-4 flex-1">
         <div class="mx-auto h-12 w-12 sm:h-16 sm:w-16 rounded-full flex items-center justify-center text-[#0a4683]" [ngClass]="circleColor">

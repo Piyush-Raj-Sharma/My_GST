@@ -1,26 +1,37 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-feature-card',
   standalone: true,
   imports: [CommonModule],
   template: `
-    <article class="rounded-xl bg-white ring-1 ring-black/5 shadow-sm/5 p-6 sm:p-8 flex gap-5">
+    <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300  min-h-[200px] flex flex-col gap-2">
       <div class="h-12 w-12 rounded-full flex items-center justify-center text-white"
            [ngClass]="accent === 'blue' ? 'bg-[#0a4683]' : 'bg-orange-500'">
-        <span class="text-xl">{{ icon }}</span>
+        <ng-container *ngIf="safeSvgIcon">
+          <span class="inline-block" [innerHTML]="safeSvgIcon"></span>
+        </ng-container>
       </div>
-      <div>
+
         <h4 class="text-xl font-semibold text-[#0a4683]">{{ title }}</h4>
-        <p class="mt-2 text-gray-600 leading-relaxed">{{ description }}</p>
-      </div>
+        <p class="text-gray-600 leading-relaxed">{{ description }}</p>
+
     </article>
   `,
 })
 export class FeatureCardComponent {
-  @Input() icon = '✔️';
+  constructor(private sanitizer: DomSanitizer) {}
+
   @Input() title = '';
   @Input() description = '';
   @Input() accent: 'blue' | 'orange' = 'blue';
+
+  protected safeSvgIcon: SafeHtml | null = null;
+  @Input() set svgIcon(value: string | undefined) {
+    this.safeSvgIcon = value && value.length
+      ? this.sanitizer.bypassSecurityTrustHtml(value)
+      : null;
+  }
 } 

@@ -6,18 +6,18 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <article class="rounded-xl bg-white ring-1 ring-black/5 shadow-sm/5 p-6 sm:p-8">
+    <article class="bg-white rounded-lg p-6 shadow-md shadow-sm/5 p-6 sm:p-8">
       <div class="flex items-center gap-4">
         <div class="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600">
           <span class="text-xl">👤</span>
         </div>
         <div>
-          <h4 class="text-lg font-semibold text-[#0a4683]">{{ name }}</h4>
+          <h4 class="text-lg font-semibold text-gray-800">{{ name }}</h4>
           <p class="text-gray-500 text-sm">{{ roleLocation }}</p>
         </div>
       </div>
       <p class="mt-4 text-gray-700 leading-relaxed">“{{ quote }}”</p>
-      <div class="mt-5 flex gap-1 text-orange-500">
+      <div class="mt-5 flex gap-1" [style.color]="starColor">
         <ng-container *ngFor="let _ of starsArray">★</ng-container>
       </div>
     </article>
@@ -28,6 +28,7 @@ export class TestimonialCardComponent {
   @Input() roleLocation = '';
   @Input() quote = '';
   @Input() rating = 5;
+  @Input() starColor: string = '#f97316';
 
   get starsArray() {
     return Array.from({ length: this.rating });

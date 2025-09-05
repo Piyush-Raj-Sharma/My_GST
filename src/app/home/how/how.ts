@@ -13,16 +13,20 @@ interface Step { number: number; title: string; description: string; accent: Acc
     <section class="bg-white py-12 sm:py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-3xl sm:text-4xl font-bold text-[#0a4683]">How It Works</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">How It Works</h2>
           <p class="mt-2 text-gray-600 text-lg">Simple steps to get your GST refund</p>
         </div>
 
-        <div class="space-y-5 sm:space-y-6">
-          <app-step-card *ngFor="let s of steps"
-                          [number]="s.number"
-                          [title]="s.title"
-                          [description]="s.description"
-                          [accent]="s.accent" />
+        <div class="max-w-4xl mx-auto">
+          <div class="flex flex-col space-y-8">
+            <app-step-card
+              *ngFor="let s of steps"
+              [number]="s.number"
+              [title]="s.title"
+              [description]="s.description"
+              [accent]="s.accent"
+            />
+          </div>
         </div>
       </div>
     </section>
