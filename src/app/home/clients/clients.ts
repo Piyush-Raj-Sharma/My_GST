@@ -41,14 +41,13 @@ interface ClientLogo { src: string; alt: string }
 })
 export class ClientsComponent {
   private readonly logos: ClientLogo[] = [
-    { src: 'https://dummyimage.com/160x48/ffffff/0a4683.png&text=kt', alt: 'KT' },
-    { src: 'https://dummyimage.com/200x48/ffffff/cc0000.png&text=MARTINI', alt: 'Martini' },
-    { src: 'https://dummyimage.com/220x48/ffffff/0a4683.png&text=Mohan+Mutha', alt: 'Mohan Mutha' },
-    { src: 'https://dummyimage.com/240x48/ffffff/0ca37f.png&text=PharmEasy', alt: 'PharmEasy' },
-    { src: 'https://dummyimage.com/200x48/ffffff/0a4683.png&text=Client+A', alt: 'Client A' },
-    { src: 'https://dummyimage.com/200x48/ffffff/0a4683.png&text=Client+B', alt: 'Client B' },
+    { src: 'https://www.mygstrefund.com/img/clients/shreeji-mango-farm.png', alt: 'KT' },
+    { src: 'https://www.mygstrefund.com/img/clients/Keyss.png', alt: 'Martini' },
+    { src: 'https://www.mygstrefund.com/img/clients/sara.png ', alt: 'Mohan Mutha' },
+    { src: 'https://www.mygstrefund.com/img/clients/PharmEasy.png', alt: 'PharmEasy' },
+    { src: 'https://www.mygstrefund.com/img/clients/MohanMuthaExports.png', alt: 'Client A' },
+    { src: 'https://www.mygstrefund.com/img/clients/Ashoka.png', alt: 'Client B' },
   ];
 
-  // Duplicate logos to enable seamless loop (50% shift)
   protected readonly repeatedLogos = [...this.logos, ...this.logos];
 } 
