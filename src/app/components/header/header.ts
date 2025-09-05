@@ -100,15 +100,12 @@ export class HeaderComponent {
       label: 'SOLUTIONS',
       widthClass: 'w-[520px]',
       groups: [
-        { title: 'GST SERVICES', items: [
+        { items: [
           { label: 'GST REGISTRATION' },
           { label: 'EXPORT REFUND' },
           { label: 'GST TCS REFUND' },
           { label: 'INVERTED DUTY & OTHERS' },
           { label: 'GENERATE BRC' },
-        ] },
-        { title: 'FINANCE', items: [
-          { label: 'EXPORT FINANCE' },
         ] },
       ],
     },
