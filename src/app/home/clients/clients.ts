@@ -16,7 +16,7 @@ interface ClientLogo { src: string; alt: string }
         </div>
 
         <div class="relative overflow-hidden group">
-          <div class="flex items-center gap-6 animate-marquee group-hover:[animation-play-state:paused]" style="--duration:2s">
+          <div class="flex items-center gap-6 animate-marquee group-hover:[animation-play-state:paused]" style="--duration:20s">
             <ng-container *ngFor="let logo of repeatedLogos">
               <div class="shrink-0 rounded-xl bg-white ring-1 ring-black/5 shadow-sm/5 px-8 py-6">
                 <img [src]="logo.src" [alt]="logo.alt" class="h-10 sm:h-12 object-contain" />
